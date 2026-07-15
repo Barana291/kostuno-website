@@ -2,27 +2,38 @@
 <html lang="de">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FFFFFF">
   <title>Datenschutzerklärung – Kostuno</title>
   <link rel="icon" href="/assets/kostuno-logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/styles.css?v=20260715-2">
+  <script>(function(){var t;try{t=localStorage.getItem('kostuno-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t})()</script>
+  <link rel="stylesheet" href="/assets/styles.css?v=20260715-3">
+  <script src="/assets/theme.js?v=20260715-1" defer></script>
 </head>
 <body>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/">
+    <a class="brand" href="/" aria-label="Kostuno">
       <img
-        class="brand-wordmark"
+        class="brand-wordmark brand-wordmark-light"
         src="/assets/kostuno-header-wordmark.png"
         alt="Kostuno"
         width="111"
         height="42"
       >
+      <img class="brand-wordmark brand-wordmark-dark" src="/assets/kostuno-header-wordmark-dark.png" alt="" aria-hidden="true" width="111" height="42">
     </a>
-    <nav class="nav" aria-label="Hauptnavigation">
-      <a href="/#funktionen">Funktionen</a>
-      <a href="/datenschutz/">Datenschutz</a>
-      <a href="mailto:support@kostuno.de">Support</a>
-    </nav>
+    <div class="header-actions">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="/#funktionen">Funktionen</a>
+        <a href="/datenschutz/">Datenschutz</a>
+        <a href="mailto:support@kostuno.de">Support</a>
+      </nav>
+      <div class="theme-control" aria-label="Darstellung auswählen">
+        <button class="theme-choice theme-choice-light" type="button" data-theme-choice="light">Hell</button>
+        <label class="theme-switch"><input class="theme-switch-input" type="checkbox" aria-label="Zwischen Hell- und Dunkelmodus wechseln"><span class="theme-switch-track" aria-hidden="true"><span class="theme-switch-thumb"></span></span></label>
+        <button class="theme-choice theme-choice-dark" type="button" data-theme-choice="dark">Dunkel</button>
+      </div>
+    </div>
   </div>
 </header>
 <main>
@@ -79,6 +90,7 @@
 
     <h2>5. Cookies, Analyse und externe Inhalte</h2>
     <p>Die Kostuno-Webseite setzt selbst keine Analyse- oder Trackingdienste ein. Sie bindet keine externen Schriftarten, Werbenetzwerke, Social-Media-Inhalte oder vergleichbare Inhalte fremder Plattformen ein.</p>
+    <p>Zur Speicherung der gewählten Darstellungsoption (Hell- oder Dunkelmodus) wird eine technisch erforderliche Einstellung ausschließlich lokal im Browser gespeichert. Sie enthält keine personenbezogenen Eingaben, wird nicht an Kostuno übertragen und nicht für Analyse-, Werbe- oder Trackingzwecke verwendet.</p>
     <p>Die technisch erforderliche Verarbeitung durch GitHub Pages wird im vorherigen Abschnitt beschrieben.</p>
 
     <h2>6. Rechte betroffener Personen</h2>

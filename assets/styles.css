@@ -57,7 +57,6 @@ img, svg { display: block; max-width: 100%; }
   line-height: 0;
   text-decoration: none;
 }
-.brand-wordmark-dark { display: none; }
 .brand-wordmark {
   display: block;
   width: auto;
@@ -200,8 +199,6 @@ h3 { font-size: 1.25rem; }
   --disabled-text: #aab3bf;
   --legal-text: #f2f4f8;
 }
-:root[data-theme="dark"] .brand-wordmark-light { display: none; }
-:root[data-theme="dark"] .brand-wordmark-dark { display: block; }
 :root[data-theme="dark"] .theme-choice-light { color: #b5beca; font-weight: 400; }
 :root[data-theme="dark"] .theme-choice-dark { color: #ffb75e; font-weight: 750; }
 :root[data-theme="dark"] .theme-switch-track { border-color: #ff9a1f; background: #ff9a1f; }
@@ -240,8 +237,6 @@ h3 { font-size: 1.25rem; }
     --card-shadow: 0 20px 55px rgba(0,0,0,.32); --orange-soft-theme: #3a2a17;
     --disabled-bg: #242a32; --disabled-text: #aab3bf; --legal-text: #f2f4f8;
   }
-  :root:not([data-theme]) .brand-wordmark-light { display: none; }
-  :root:not([data-theme]) .brand-wordmark-dark { display: block; }
   :root:not([data-theme]) .theme-choice-light { color: #b5beca; font-weight: 400; }
   :root:not([data-theme]) .theme-choice-dark { color: #ffb75e; font-weight: 750; }
   :root:not([data-theme]) .theme-switch-track { border-color: #ff9a1f; background: #ff9a1f; }

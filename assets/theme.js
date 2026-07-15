@@ -30,16 +30,13 @@
     }
   }
 
-  function syncWordmarks(theme) {
-    var light = document.querySelector('.brand-wordmark-light');
-    var dark = document.querySelector('.brand-wordmark-dark');
-    if (!light || !dark) return;
+  function syncWordmark(theme) {
+    var wordmark = document.querySelector('.brand-wordmark');
+    if (!wordmark) return;
 
-    var lightIsVisible = theme === 'light';
-    light.alt = lightIsVisible ? 'Kostuno' : '';
-    light.setAttribute('aria-hidden', lightIsVisible ? 'false' : 'true');
-    dark.alt = lightIsVisible ? '' : 'Kostuno';
-    dark.setAttribute('aria-hidden', lightIsVisible ? 'true' : 'false');
+    wordmark.src = theme === 'dark'
+      ? '/assets/kostuno-header-wordmark-dark.png?v=20260715-1'
+      : '/assets/kostuno-header-wordmark.png?v=20260715-1';
   }
 
   function applyTheme(theme) {
@@ -50,7 +47,7 @@
       choice.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
     if (themeColor) themeColor.content = theme === 'dark' ? '#0F1115' : '#FFFFFF';
-    syncWordmarks(theme);
+    syncWordmark(theme);
   }
 
   function selectTheme(theme) {

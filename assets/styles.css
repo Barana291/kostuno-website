@@ -34,9 +34,19 @@ img, svg { display: block; max-width: 100%; }
 }
 .header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand {
-  display: inline-flex; align-items: center; text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  line-height: 0;
+  text-decoration: none;
 }
-.brand img { width: auto; height: 42px; }
+.brand-wordmark {
+  display: block;
+  width: auto;
+  height: 42px;
+  max-width: 111px;
+  object-fit: contain;
+}
 .nav { display: flex; align-items: center; gap: 22px; }
 .nav a { text-decoration: none; color: var(--muted); font-weight: 650; }
 .nav a:hover, .nav a:focus-visible { color: var(--navy); }
@@ -139,7 +149,8 @@ h3 { font-size: 1.25rem; }
 }
 @media (max-width: 640px) {
   .container { width: min(calc(100% - 28px),var(--max-width)); }
-  .header-inner { min-height: 68px; }
+  .header-inner { min-height: 76px; }
+  .brand-wordmark { height: 38px; max-width: 100px; }
   .nav a:not(:last-child) { display: none; }
   .hero { padding: 58px 0; }
   .section { padding: 64px 0; }

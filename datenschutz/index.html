@@ -48,29 +48,51 @@
     <p>E-Mail: <a href="mailto:support@kostuno.de">support@kostuno.de</a></p>
 
     <h2>2. Datenschutz in der Kostuno-App</h2>
-    <p>Die Kostuno-App verarbeitet die von Nutzerinnen und Nutzern eingegebenen Berechnungs-, Kosten- und Verlaufsdaten lokal auf dem verwendeten Gerät. Dazu können insbesondere Bezeichnungen und Beträge, Verbrauchs- und Preisangaben, Fahrtstrecken und Kraftstoffarten, Abonnements, einmalige und wiederkehrende Kosten sowie die Auswahl für die Gesamtkosten gehören. Auch Darstellungsoptionen werden lokal gespeichert.</p>
-    <p>Für die Nutzung ist kein Benutzerkonto erforderlich.</p>
-    <p>In der derzeitigen Version werden keine Analyse-, Werbe- oder Trackingdienste eingesetzt. Die innerhalb der App eingegebenen Berechnungsdaten werden nicht automatisch an den Anbieter von Kostuno oder an eigene Server übertragen.</p>
-    <p>Das automatische cloudbasierte Android-Backup der Kostuno-App ist deaktiviert. Kostuno betreibt keine eigene Cloud zur Speicherung dieser App-Daten.</p>
+    <p>Die Kostuno-App verarbeitet die von Nutzerinnen und Nutzern eingegebenen Berechnungs-, Kosten- und Verlaufsdaten grundsätzlich lokal auf dem verwendeten Gerät. Dazu können insbesondere Bezeichnungen und Beträge, Verbrauchs- und Preisangaben, Fahrtstrecken und Kraftstoffarten, Abonnements, einmalige und wiederkehrende Kosten sowie Angaben zur Berechnung und Analyse der Gesamtkosten gehören. Auch Einstellungen und Darstellungsoptionen werden lokal gespeichert.</p>
+    <p>Für die Nutzung von Kostuno ist kein Benutzerkonto erforderlich.</p>
+    <p>Kostuno setzt derzeit keine eigenen Analyse-, Werbe- oder Trackingdienste ein. Die innerhalb der App gespeicherten Kosten- und Berechnungsdaten werden nicht automatisch an den Anbieter von Kostuno oder an eigene Server übertragen.</p>
+    <p>Das automatische cloudbasierte Android-Backup der Kostuno-App ist deaktiviert. Kostuno betreibt keine eigene Cloud zur Speicherung der innerhalb der App erfassten Kostendaten.</p>
+
+    <h3>Belegscanner, Kamera und Bilder</h3>
+    <p>Kostuno bietet eine Funktion zum Erfassen von Belegen. Nutzerinnen und Nutzer können hierfür ausdrücklich eine Scan- beziehungsweise Kamerafunktion starten oder ein Bild über eine vom Betriebssystem bereitgestellte Auswahlfunktion auswählen.</p>
+    <p>Der Zugriff auf die Kamera erfolgt nur im Zusammenhang mit einer vom Nutzer ausgelösten Scanner- beziehungsweise Kamerafunktion. Die Kameraberechtigung wird nicht für Analyse-, Werbe- oder Trackingzwecke verwendet.</p>
+    <p>Zur Erkennung von Text, insbesondere von Datums- und Betragsangaben, verwendet Kostuno eine gerätebasierte Texterkennung mit Google ML Kit. Die eigentliche Texterkennung wird auf dem Gerät durchgeführt.</p>
+    <p>Für die Dokumentenerfassung kann außerdem die ML Kit Document Scanner API verwendet werden. Diese Scanner-Komponente wird über die Google Play-Dienste bereitgestellt. Erforderliche Scanner-Komponenten können dabei von den Google Play-Diensten auf dem Gerät bereitgestellt beziehungsweise verwaltet werden.</p>
+    <p>Kostuno selbst lädt Belegbilder oder den daraus erkannten Text nicht auf eigene Server hoch und betreibt hierfür keinen Cloud-OCR-Dienst.</p>
+    <p>Während der Verarbeitung können Belegbilder, zugeschnittene Bildbereiche und erkannter Text vorübergehend lokal verarbeitet werden. Von Kostuno kontrollierte temporäre Scannerdateien werden nach Abschluss beziehungsweise Verlassen des entsprechenden Verarbeitungsvorgangs bereinigt. Über die Systemauswahl ausgewählte Originalbilder werden von Kostuno nicht gelöscht.</p>
+    <p>Der erkannte Inhalt wird vor der Übernahme zur Prüfung angezeigt und kann von der Nutzerin oder dem Nutzer korrigiert werden. Eine automatische Speicherung eines Belegs allein aufgrund der Texterkennung findet nicht statt. Erst nach ausdrücklicher Bestätigung werden die übernommenen Kosteninformationen in den lokalen Kostendaten gespeichert.</p>
+    <p>Das ursprüngliche Belegbild und der vollständige OCR-Rohtext werden nicht als Bestandteil des Kosteneintrags dauerhaft im Kostuno-Datenspeicher gespeichert.</p>
+    <p>Die automatische Belegerkennung befindet sich derzeit in der Weiterentwicklung und kann fehlerhafte oder unvollständige Ergebnisse liefern. Erkannte Angaben sollten daher vor der Übernahme überprüft werden.</p>
+
+    <h3>Nutzungszähler des Belegscanners</h3>
+    <p>Zur Bereitstellung des für die jeweilige App-Version vorgesehenen Funktionsumfangs kann Kostuno lokal speichern, wie viele Belege erfolgreich über den Belegscanner übernommen wurden.</p>
+    <p>Der Zähler wird ausschließlich lokal auf dem Gerät gespeichert und nicht an Kostuno oder eigene Server übertragen.</p>
+    <p>Das bloße Öffnen des Scanners, ein abgebrochener Scan, ein Fehler bei der Erkennung oder das Verlassen der Überprüfung ohne erfolgreiche Übernahme erhöht diesen Zähler nicht.</p>
 
     <h3>Backup und Wiederherstellung</h3>
-    <p>Auf ausdrückliche Nutzeraktion kann Kostuno eine Sicherungsdatei mit den lokal gespeicherten Berechnungs-, Verlaufs-, Abo- und Einstellungsdaten erstellen. Die Sicherungsdatei wird als nicht verschlüsselte JSON-Datei erstellt und kann persönliche Kosten- und Berechnungsdaten im Klartext enthalten.</p>
-    <p>Der Speicherort wird über die Dateiauswahl des Geräts selbst gewählt. Kostuno lädt die Sicherungsdatei nicht automatisch auf eigene Server oder Cloud-Dienste hoch. Sicherungsdateien sollten daher geschützt und nur an vertrauenswürdigen Orten gespeichert werden.</p>
-    <p>Eine von der Nutzerin oder dem Nutzer ausgewählte Kostuno-Sicherungsdatei kann wieder in die App importiert werden. Auswahl, Prüfung und Wiederherstellung erfolgen lokal auf dem Gerät.</p>
+    <p>Auf ausdrückliche Nutzeraktion kann Kostuno eine Sicherungsdatei mit den lokal gespeicherten Berechnungs-, Verlaufs-, Abo- und Einstellungsdaten erstellen.</p>
+    <p>Aktuelle Kostuno-Sicherungen werden vor dem Speichern mit einem von der Nutzerin oder dem Nutzer vergebenen Passwort verschlüsselt. Hierfür verwendet Kostuno AES-256-GCM und leitet den Schlüssel mit PBKDF2-HMAC-SHA256, 210.000 Iterationen sowie einem zufälligen Salt ab; für jede Sicherung wird außerdem eine zufällige Nonce verwendet. Das Passwort wird von Kostuno nicht dauerhaft gespeichert und kann von Kostuno nicht wiederhergestellt werden.</p>
+    <p>Der Speicherort der Sicherungsdatei wird über die Dateiauswahl des Geräts gewählt. Kostuno lädt Sicherungsdateien nicht automatisch auf eigene Server oder Cloud-Dienste hoch.</p>
+    <p>Wird als Speicherort ein durch einen externen Anbieter bereitgestellter Speicher- oder Cloud-Dienst ausgewählt, erfolgt die weitere Speicherung und Verarbeitung durch diesen Anbieter nach dessen eigenen Datenschutzbedingungen.</p>
+    <p>Eine von der Nutzerin oder dem Nutzer ausgewählte Kostuno-Sicherungsdatei kann wieder in die App importiert werden. Auswahl, Prüfung, Entschlüsselung und Wiederherstellung erfolgen innerhalb der App beziehungsweise auf dem verwendeten Gerät. Bestehende Sicherungen im früheren Legacy-V1-Format können weiterhin importiert werden; neu erstellte Sicherungen werden verschlüsselt.</p>
+    <p>Zum Schutz der Sicherungsdatei sollte ein ausreichend starkes und nur der Nutzerin oder dem Nutzer bekanntes Passwort verwendet werden.</p>
 
     <h3>Export von Kostenübersichten</h3>
-    <p>Auf ausdrückliche Nutzeraktion kann Kostuno Kostenübersichten als PDF- oder CSV-Datei lokal erstellen. Diese Dateien können persönliche Kosteninformationen, Bezeichnungen, Zeiträume und Berechnungsergebnisse enthalten. Kostuno lädt PDF-, CSV- oder Sicherungsdateien nicht automatisch auf eigene Server oder Cloud-Dienste hoch.</p>
+    <p>Auf ausdrückliche Nutzeraktion kann Kostuno Kostenübersichten als PDF- oder CSV-Datei lokal erstellen. Diese Dateien können persönliche Kosteninformationen, Bezeichnungen, Zeiträume und Berechnungsergebnisse enthalten.</p>
+    <p>Kostuno lädt PDF-, CSV- oder Sicherungsdateien nicht automatisch auf eigene Server oder Cloud-Dienste hoch.</p>
     <p>Über die Teilen-Funktion des Geräts kann eine Nutzerin oder ein Nutzer selbst entscheiden, eine erstellte Datei an eine ausgewählte App oder einen externen Dienst zu übergeben. Kostuno wählt den Empfänger nicht automatisch aus. Nach der Übergabe richtet sich die weitere Verarbeitung nach den Datenschutzbedingungen der ausgewählten App oder des ausgewählten Dienstes.</p>
 
-    <h3>Lokale Analysen</h3>
-    <p>Sparpotenzial, Was-wäre-wenn-Simulationen und erweiterte Kostenanalysen werden ausschließlich lokal anhand der gespeicherten Kostendaten berechnet. Dabei werden keine generative KI und keine externen Vergleichs- oder Analysedienste eingesetzt.</p>
+    <h3>Lokale Analysen und Optimierungsszenarien</h3>
+    <p>Kostenübersichten, Sparsimulationen, Optimierungsszenarien und erweiterte Kostenanalysen werden anhand der lokal gespeicherten Kostendaten berechnet.</p>
+    <p>Kostuno verwendet hierfür derzeit keine generative KI und übermittelt die gespeicherten Kostendaten nicht an externe KI-, Vergleichs- oder Analysedienste.</p>
+    <p>Angezeigte Einsparungen und Optimierungsmöglichkeiten sind rechnerische Szenarien auf Grundlage der von der Nutzerin oder dem Nutzer eingegebenen beziehungsweise gespeicherten Daten. Sie stellen keine Garantie für eine tatsächlich erzielbare Ersparnis dar.</p>
 
     <h3>Speicherdauer und Löschung</h3>
-    <p>Lokal gespeicherte Kostendaten bleiben grundsätzlich auf dem Gerät, bis einzelne Einträge, der Verlauf oder die gespeicherten Abonnements und Berechnungen innerhalb der App gelöscht, die App-Daten über Android gelöscht oder die App deinstalliert werden. Kostuno ermöglicht das Löschen einzelner Verlaufseinträge und Abonnements, des gesamten Verlaufs sowie aller gespeicherten Abonnements und Berechnungen.</p>
+    <p>Lokal gespeicherte Kostendaten bleiben grundsätzlich auf dem Gerät, bis einzelne Einträge oder gespeicherte Daten innerhalb der App gelöscht, die App-Daten über Android gelöscht oder die App deinstalliert werden.</p>
+    <p>Kostuno bietet Funktionen zum Löschen gespeicherter Daten innerhalb der App.</p>
     <p>Vom Nutzer außerhalb des internen App-Speichers dauerhaft gespeicherte Sicherungs-, PDF- oder CSV-Dateien werden durch das Löschen von App-Daten oder durch eine Deinstallation nicht automatisch entfernt. Sie bleiben am gewählten Speicherort bestehen, bis sie dort von der Nutzerin oder dem Nutzer oder durch den ausgewählten Speicherdienst gelöscht werden.</p>
-    <p>Temporäre Dateien, die Kostuno für die Übergabe an die Teilen-Funktion erstellt, werden nach Abschluss oder Abbruch des Teilvorgangs wieder aus dem temporären App-Verzeichnis entfernt.</p>
-
-    <p>Externe Webseiten oder das E-Mail-Programm werden nur geöffnet, wenn Nutzerinnen oder Nutzer die jeweilige Funktion selbst auswählen. Für die anschließende Verarbeitung gelten die Datenschutzbestimmungen des jeweiligen externen Dienstes. Gespeicherte Kostendaten werden beim Öffnen dieser Links nicht an die jeweilige Webseite übergeben.</p>
+    <p>Von Kostuno kontrollierte temporäre Dateien, die beispielsweise für Scanverarbeitung oder Teilen-Funktionen erstellt werden, werden nach Abschluss beziehungsweise Abbruch des jeweiligen Vorgangs bereinigt, soweit sie nicht mehr benötigt werden.</p>
+    <p>Externe Webseiten oder das E-Mail-Programm werden nur geöffnet, wenn Nutzerinnen oder Nutzer die jeweilige Funktion selbst auswählen. Für die anschließende Verarbeitung gelten die Datenschutzbestimmungen des jeweiligen externen Dienstes. Gespeicherte Kostendaten werden beim bloßen Öffnen dieser Links nicht an die jeweilige Webseite übergeben.</p>
 
     <h2>3. Kontaktaufnahme per E-Mail</h2>
     <p>Bei einer Kontaktaufnahme per E-Mail werden die freiwillig übermittelten Angaben verarbeitet. Dazu können insbesondere die E-Mail-Adresse, der Name, der Nachrichteninhalt und übermittelte Anhänge gehören.</p>
@@ -126,7 +148,7 @@
 
     <h2>8. Aktualisierung</h2>
     <p>Diese Datenschutzerklärung wird angepasst, wenn sich die Funktionen der App, eingesetzte Dienstleister oder rechtliche Anforderungen ändern.</p>
-    <p>Stand: August 2026</p>
+    <p>Stand: 31. August 2026</p>
   </article>
 </main>
 <footer class="site-footer">

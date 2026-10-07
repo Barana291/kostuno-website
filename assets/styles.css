@@ -15,8 +15,6 @@
   --header-line: rgba(221, 227, 238, 0.90);
   --card-shadow: 0 20px 55px rgba(13, 27, 61, 0.12);
   --orange-soft-theme: #fff1df;
-  --disabled-bg: #eef1f6;
-  --disabled-text: #7a8291;
   --legal-text: #465065;
   --navy: var(--brand-navy);
   --navy-soft: var(--brand-navy-soft);
@@ -101,7 +99,6 @@ h3 { font-size: 1.25rem; }
 }
 .button-primary { color: #fff; background: var(--navy); box-shadow: 0 12px 26px rgba(13,27,61,.2); }
 .button-secondary { color: var(--navy); border-color: var(--line); background: var(--surface); }
-.button-disabled { color: var(--disabled-text); border-color: var(--line); background: var(--disabled-bg); cursor: not-allowed; }
 .hero-note { margin-top: 18px; color: var(--muted); font-size: .92rem; }
 .phone-shell {
   width: min(100%,390px); margin-inline: auto; padding: 14px; border-radius: 42px;
@@ -205,8 +202,6 @@ h3 { font-size: 1.25rem; }
   --header-line: rgba(70, 79, 91, 0.75);
   --card-shadow: 0 20px 55px rgba(0, 0, 0, 0.32);
   --orange-soft-theme: #3a2a17;
-  --disabled-bg: #242a32;
-  --disabled-text: #aab3bf;
   --legal-text: #f2f4f8;
 }
 :root[data-theme="dark"] .theme-choice-light { color: #b5beca; font-weight: 400; }
@@ -220,7 +215,6 @@ h3 { font-size: 1.25rem; }
 :root[data-theme="dark"] .eyebrow { color: #ffb75e; }
 :root[data-theme="dark"] .button-primary { color: #0f1115; background: #ff9a1f; box-shadow: 0 12px 26px rgba(0,0,0,.28); }
 :root[data-theme="dark"] .button-secondary { color: var(--heading); background: var(--surface-elevated); }
-:root[data-theme="dark"] .button-disabled { color: #aab3bf; background: #242a32; }
 :root[data-theme="dark"] .phone-shell { border: 1px solid #46505c; background: #090b0e; }
 :root[data-theme="dark"] .phone-screen { background: #13171c; }
 :root[data-theme="dark"] .phone-logo { background: #0d1b3d; }
@@ -245,7 +239,7 @@ h3 { font-size: 1.25rem; }
     --text: #f2f4f8; --heading: #f7f9fc; --muted: #b5beca; --line: #353d47;
     --header-bg: rgba(15,17,21,.92); --header-line: rgba(70,79,91,.75);
     --card-shadow: 0 20px 55px rgba(0,0,0,.32); --orange-soft-theme: #3a2a17;
-    --disabled-bg: #242a32; --disabled-text: #aab3bf; --legal-text: #f2f4f8;
+    --legal-text: #f2f4f8;
   }
   :root:not([data-theme]) .theme-choice-light { color: #b5beca; font-weight: 400; }
   :root:not([data-theme]) .theme-choice-dark { color: #ffb75e; font-weight: 750; }
@@ -476,4 +470,24 @@ a,
   .mini-card {
     grid-template-columns: minmax(0,1fr);
   }
+}
+
+/* Production landing page: reuse existing cards and theme colors. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.analysis-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.privacy-panel p + p { margin-top: 14px; }
+.button-primary:hover { filter: brightness(1.12); }
+.button-secondary:hover { border-color: var(--heading); }
+@media (max-width: 900px) {
+  .analysis-grid { grid-template-columns: minmax(0, 1fr); }
 }
